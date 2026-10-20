@@ -187,10 +187,10 @@ a { color: var(--brand); }
   margin: 0 0 20px;
   font-family: "Lora", Georgia, serif;
   font-weight: 600;
-  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-  max-width: 15ch;
+  font-size: clamp(1.8rem, 3.3vw, 2.6rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
 }
 
 .hero-intro {
