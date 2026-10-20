@@ -187,10 +187,10 @@ a { color: var(--brand); }
   margin: 0 0 20px;
   font-family: "Lora", Georgia, serif;
   font-weight: 600;
-  font-size: clamp(1.8rem, 3.3vw, 2.6rem);
-  line-height: 1.14;
-  letter-spacing: -0.02em;
-  max-width: 20ch;
+  font-size: clamp(2.05rem, 4.6vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  max-width: 15ch;
 }
 
 .hero-intro {
@@ -337,11 +337,9 @@ a { color: var(--brand); }
 .app-badge:hover { opacity: .82; }
 
 .app-badge img {
-  height: 60px;
+  height: 48px;
   width: auto;
 }
-
-.app-badge.apple img { height: 40px; }
 
 /* ---------- legal ---------- */
 
@@ -464,6 +462,11 @@ a { color: var(--brand); }
 /* ---------- narrow screens ---------- */
 
 @media (max-width: 860px) {
+  .app-badges { justify-content: center; }
+  .app-shot { margin-left: auto; margin-right: auto; }
+  .app-copy { text-align: center; }
+  .app-copy .app-summary,
+  .app-copy .app-description { margin-left: auto; margin-right: auto; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-mark { justify-self: start; }
   .hero-mark img { width: 200px; height: 200px; }
