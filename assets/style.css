@@ -322,6 +322,36 @@ a { color: var(--brand); }
   max-width: 60ch;
 }
 
+.app-points {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 60ch;
+}
+
+.app-points li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+
+.app-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 10px;
+  height: 2px;
+  background: var(--brand);
+}
+
+.app-disclaimer {
+  margin: 18px 0 0;
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .app-badges {
   display: flex;
   flex-wrap: wrap;
