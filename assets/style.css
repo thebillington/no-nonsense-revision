@@ -266,18 +266,21 @@ a { color: var(--brand); }
 }
 
 .app {
+  display: grid;
+  grid-template-columns: 196px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
   background: var(--wash);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 26px;
+  padding: 22px;
   box-shadow: var(--shadow);
 }
 
 .app-shot {
   position: relative;
   width: 100%;
-  max-width: 280px;
-  margin-bottom: 26px;
+  max-width: 196px;
 }
 
 .app-shot img {
@@ -338,8 +341,8 @@ a { color: var(--brand); }
 .app-badge:hover { opacity: .82; }
 
 .app-badge img {
-  width: 148px;
-  height: auto;
+  height: 42px;
+  width: auto;
 }
 
 /* ---------- legal ---------- */
@@ -463,8 +466,8 @@ a { color: var(--brand); }
 /* ---------- narrow screens ---------- */
 
 @media (max-width: 860px) {
-  .app-badges { justify-content: center; }
-  .app-shot { margin-left: auto; margin-right: auto; }
+  .app { grid-template-columns: 1fr; }
+  .app-shot { margin: 0 auto 22px; }
   .app-copy { text-align: center; }
   .app-copy .app-summary,
   .app-copy .app-description { margin-left: auto; margin-right: auto; }
