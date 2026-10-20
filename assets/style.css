@@ -323,7 +323,8 @@ a { color: var(--brand); }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
+  gap: 16px;
   margin-top: 24px;
 }
 
@@ -337,8 +338,8 @@ a { color: var(--brand); }
 .app-badge:hover { opacity: .82; }
 
 .app-badge img {
-  height: 48px;
-  width: auto;
+  width: 148px;
+  height: auto;
 }
 
 /* ---------- legal ---------- */
