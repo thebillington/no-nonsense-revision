@@ -266,21 +266,21 @@ a { color: var(--brand); }
 }
 
 .app {
-  display: grid;
-  grid-template-columns: 196px minmax(0, 1fr);
-  gap: 30px;
-  align-items: start;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
   background: var(--wash);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 24px;
   box-shadow: var(--shadow);
 }
 
 .app-shot {
   position: relative;
   width: 100%;
-  max-width: 196px;
+  max-width: 200px;
+  margin: 0 auto 20px;
 }
 
 .app-shot img {
@@ -340,10 +340,16 @@ a { color: var(--brand); }
 
 .app-badge:hover { opacity: .82; }
 
+/* Sized by height, because the two official files carry different padding.
+   Apple's badge has none, so it is 40px tall. Google's file is 646x250 with
+   82px of transparent padding, so its visible content is only 67% of the
+   height: at 60px the visible badge is 40px, matching Apple's exactly. */
 .app-badge img {
-  height: 42px;
+  height: 40px;
   width: auto;
 }
+
+.app-badge.play img { height: 60px; }
 
 /* ---------- legal ---------- */
 
@@ -466,11 +472,7 @@ a { color: var(--brand); }
 /* ---------- narrow screens ---------- */
 
 @media (max-width: 860px) {
-  .app { grid-template-columns: 1fr; }
-  .app-shot { margin: 0 auto 22px; }
-  .app-copy { text-align: center; }
-  .app-copy .app-summary,
-  .app-copy .app-description { margin-left: auto; margin-right: auto; }
+  .app-shot { margin-bottom: 18px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-mark { justify-self: start; }
   .hero-mark img { width: 200px; height: 200px; }
