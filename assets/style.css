@@ -266,142 +266,82 @@ a { color: var(--brand); }
 }
 
 .app {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 258px;
-  gap: 52px;
-  align-items: start;
   background: var(--wash);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 34px 38px;
+  padding: 26px;
   box-shadow: var(--shadow);
 }
 
-.app + .app { margin-top: 26px; }
-
-.app-head {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 18px;
+.app-shot {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 26px;
 }
 
-.app-icon {
-  flex: none;
-  border-radius: 17px;
-  box-shadow: 0 10px 24px rgba(4, 20, 45, .18);
+.app-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+.app-shot img.app-logo {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 3px solid var(--paper);
+  box-shadow: 0 10px 24px rgba(4, 20, 45, .3);
 }
 
 .app-name {
-  margin: 0 0 2px;
+  margin: 0 0 4px;
   font-family: "Lora", Georgia, serif;
   font-weight: 600;
-  font-size: 1.42rem;
+  font-size: 1.5rem;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 .app-summary {
-  margin: 0;
-  color: var(--muted);
-  font-size: .98rem;
+  margin: 0 0 10px;
+  color: var(--brand);
+  font-weight: 500;
 }
 
 .app-description {
-  margin: 0 0 26px;
-  max-width: 58ch;
+  margin: 0;
+  max-width: 60ch;
 }
 
-.app-disclaimer {
-  margin: -12px 0 24px;
-  color: var(--muted);
-  font-size: .9rem;
-  font-style: italic;
-  max-width: 58ch;
-}
-
-.app-points {
-  list-style: none;
-  margin: 0 0 28px;
-  padding: 0;
-  display: grid;
-  gap: 9px;
-  max-width: 54ch;
-}
-
-.app-points li {
-  position: relative;
-  padding-left: 26px;
-  color: var(--muted);
-  font-size: .97rem;
-}
-
-.app-points li::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: .62em;
-  width: 7px;
-  height: 7px;
-  border-radius: 2px;
-  background: var(--brand);
-}
-
-.store-links {
+.app-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-}
-
-.store {
-  display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 12px 20px;
-  border-radius: 11px;
-  background: var(--brand);
-  color: var(--on-brand);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: .95rem;
-  letter-spacing: -0.005em;
-  transition: background .15s ease, transform .15s ease;
+  gap: 14px;
+  margin-top: 24px;
 }
 
-.store:hover {
-  background: var(--brand-deep);
-  color: var(--on-brand);
-  transform: translateY(-1px);
+.app-badge {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 8px;
+  transition: opacity .15s ease;
 }
 
-.store-apple {
-  background: transparent;
-  color: var(--brand);
-  border: 1.5px solid var(--brand);
+.app-badge:hover { opacity: .82; }
+
+.app-badge img {
+  height: 60px;
+  width: auto;
 }
 
-.store-apple:hover {
-  background: color-mix(in srgb, var(--brand) 10%, transparent);
-  color: var(--brand);
-}
-
-.store-soon {
-  background: transparent;
-  color: var(--muted);
-  border: 1px dashed var(--line);
-}
-
-
-
-.app-shot picture { display: block; }
-
-.app-shot img {
-  display: block;
-  width: 100%;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  box-shadow: 0 16px 40px rgba(4, 20, 45, .16);
-}
+.app-badge.apple img { height: 40px; }
 
 /* ---------- legal ---------- */
 
