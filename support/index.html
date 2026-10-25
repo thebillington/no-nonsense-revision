@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support · No Nonsense</title>
+  <meta name="description" content="Get help with a No Nonsense app, or report a problem.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Support · No Nonsense">
+  <meta property="og:description" content="Get help with a No Nonsense app, or report a problem.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/assets/style.css?v=7da7bd9e">
+  <link rel="icon" type="image/png" href="/assets/icons/wset2.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <a class="wordmark" href="/">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <span>No Nonsense</span>
+      </a>
+      <nav class="masthead-nav" aria-label="Primary">
+        <a href="/#apps">Apps</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+<article class="legal support">
+  <header class="legal-head">
+    <h1>Support</h1>
+    <p class="effective">Help with any app in the No Nonsense series.</p>
+  </header>
+  <div class="support-contact">
+    <p>Email is the fastest way to reach us.</p>
+    <a class="support-email" href="mailto:billy.rebecchi@googlemail.com">billy.rebecchi@googlemail.com</a>
+    <p class="support-note">We read every message and usually reply within two working days.</p>
+  </div>
+<section class="support-form-section" aria-labelledby="support-form-heading">
+  <h2 id="support-form-heading">Send it from here</h2>
+  <p class="support-form-intro">Every message becomes a ticket in our tracker, so it cannot get lost.</p>
+  <form id="support-form" class="support-form" action="/api/support" method="post"
+        data-support-email="billy.rebecchi@googlemail.com" hidden>
+    <div class="field-grid">
+      <div class="field">
+        <label for="support-email">Email</label>
+        <input id="support-email" name="email" type="email" autocomplete="email"
+               maxlength="254" required>
+        <p class="field-hint">Only used to reply to you.</p>
+      </div>
+      <div class="field">
+        <label for="support-name">Name <span class="optional">optional</span></label>
+        <input id="support-name" name="name" type="text" autocomplete="name" maxlength="100">
+      </div>
+    </div>
+
+    <div class="field-grid">
+      <div class="field">
+        <label for="support-app">App</label>
+        <select id="support-app" name="app">
+          <option value="wset2">WSET Level 2 Wines</option>
+          <option value="j277">OCR J277 GCSE Computer Science</option>
+          <option value="website">The website</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="support-category">What is it about?</label>
+        <select id="support-category" name="category">
+          <option value="bug">Something is broken</option>
+          <option value="purchase">A purchase or unlock</option>
+          <option value="content">The content</option>
+          <option value="data">My progress or data</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="support-message">What happened?</label>
+      <textarea id="support-message" name="message" rows="7" minlength="20"
+                maxlength="5000" required></textarea>
+      <p class="field-hint">What you expected, and what happened instead. A screenshot
+        can follow in our reply.</p>
+    </div>
+
+    <details class="support-extra">
+      <summary>Add device details <span class="optional">optional</span></summary>
+      <div class="field-grid">
+        <div class="field">
+          <label for="support-version">App version</label>
+          <input id="support-version" name="appVersion" type="text" maxlength="40">
+        </div>
+        <div class="field">
+          <label for="support-device">Device</label>
+          <input id="support-device" name="device" type="text" maxlength="100"
+                 placeholder="iPhone 17, iOS 18.2">
+        </div>
+      </div>
+    </details>
+
+    <div class="support-honeypot" aria-hidden="true">
+      <label for="support-nickname">Leave this empty</label>
+      <input id="support-nickname" name="nickname_confirm" type="text"
+             tabindex="-1" autocomplete="off">
+    </div>
+
+    <label class="support-consent">
+      <input type="checkbox" name="consent" required>
+      <span>I agree that my message and email address will be stored in GitHub so
+        we can reply.</span>
+    </label>
+
+
+    <p class="support-form-status" id="support-form-status" role="status"
+       aria-live="polite" tabindex="-1"></p>
+    <button type="submit" class="support-submit">Send support request</button>
+  </form>
+  <noscript>
+    <p>This form needs JavaScript. Please
+      <a href="mailto:billy.rebecchi@googlemail.com">email us</a> instead.</p>
+  </noscript>
+</section>
+
+  <div class="legal-body">
+  <h2>Before you write</h2>
+    <p>Tell us which app you are using, what device you are on, and what you expected to happen. A screenshot helps if something looks wrong.</p>
+  <h2>A purchase did not appear</h2>
+    <p>Purchases are handled by the App Store or Google Play, so restoring them is done there rather than by us.</p>
+    <p>On an Apple device, open the app&#x27;s purchase screen and choose Restore Purchases. On Android, the same option is on the unlock screen. Check that you are signed in with the same Apple ID or Google account you bought it with. If the purchase still does not appear, email us with the order number and we will look into it.</p>
+  <h2>Refunds</h2>
+    <p>Refunds are handled by the store you bought from, under its rules and your statutory rights. Apple and Google both let you request one from your purchase history. We cannot issue a refund ourselves, but we can help explain the purchase.</p>
+  <h2>Your progress and data</h2>
+    <p>Your progress lives on your device. We cannot see it, and we cannot reset or recover it for you. To start again, use Reset all data in the app&#x27;s settings before you uninstall.</p>
+  <h2>Reporting a bug</h2>
+    <p>Use the form on this page or email <a href="mailto:billy.rebecchi@googlemail.com">billy.rebecchi@googlemail.com</a>, whichever you prefer. Every message becomes a ticket in our tracker, so nothing gets lost. Tell us what you expected and what happened instead.</p>
+  </div>
+</article>
+<script src="/assets/support.js?v=7da7bd9e" defer></script>
+
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <div>
+          <p class="footer-name">No Nonsense</p>
+          <p class="footer-tag">Focused revision for exams that matter.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/#apps">Apps</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy policy</a>
+        <a href="/terms/">Terms and conditions</a>
+        <a href="mailto:billy.rebecchi@googlemail.com">Contact</a>
+      </nav>
+    </div>
+    <div class="shell footer-legal">
+      <p>&copy; 2026 Billy Rebecchi.</p>
+    </div>
+  </footer>
+</body>
+</html>
