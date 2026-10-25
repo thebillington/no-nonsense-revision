@@ -9,7 +9,7 @@
   <meta property="og:title" content="Support · No Nonsense">
   <meta property="og:description" content="Get help with a No Nonsense app, or report a problem.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="/assets/style.css?v=fab36e8d">
+  <link rel="stylesheet" href="/assets/style.css?v=d0712f48">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -42,7 +42,8 @@
   <h2 id="support-form-heading">Send it from here</h2>
   <p class="support-form-intro">Every message becomes a ticket in our tracker, so it
     cannot get lost. We usually reply within two working days.</p>
-  <form id="support-form" class="support-form" action="https://thebillington.co.uk/api/support" method="post" hidden>
+  <form id="support-form" class="support-form" action="https://thebillington.co.uk/api/support" method="post"
+        enctype="multipart/form-data" hidden>
     <div class="field-grid">
       <div class="field">
         <label for="support-email">Email</label>
@@ -81,8 +82,14 @@
       <label for="support-message">What happened?</label>
       <textarea id="support-message" name="message" rows="7" minlength="20"
                 maxlength="5000" required></textarea>
-      <p class="field-hint">What you expected, and what happened instead. A screenshot
-        can follow in our reply.</p>
+      <p class="field-hint">What you expected, and what happened instead.</p>
+    </div>
+
+    <div class="field">
+      <label for="support-screenshot">Screenshot <span class="optional">optional</span></label>
+      <input id="support-screenshot" name="screenshot" type="file"
+             accept="image/png,image/jpeg,image/webp,image/gif">
+      <p class="field-hint">PNG, JPEG, WebP or GIF, up to 5 MB.</p>
     </div>
 
     <details class="support-extra">
@@ -108,8 +115,8 @@
 
     <label class="support-consent">
       <input type="checkbox" name="consent" required>
-      <span>I agree that my message and email address will be stored in GitHub so
-        we can reply.</span>
+      <span>I agree that my message, email address and any screenshot will be
+        stored in GitHub so we can reply.</span>
     </label>
 
     <div class="cf-turnstile" data-sitekey="0x4AAAAAAFlwc_IkSjyWk9ht" data-theme="auto"></div>
@@ -138,7 +145,7 @@
     <p>Use the form on this page. Every message becomes a ticket in our tracker, so nothing gets lost. Tell us what you expected and what happened instead.</p>
   </div>
 </article>
-<script src="/assets/support.js?v=fab36e8d" defer></script>
+<script src="/assets/support.js?v=d0712f48" defer></script>
 
   </main>
 

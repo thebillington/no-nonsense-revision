@@ -54,33 +54,26 @@
         ? cryptoApi.randomUUID()
         : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 
-    const payload = {
-      email: data.get("email"),
-      name: data.get("name"),
-      app: data.get("app"),
-      appVersion: data.get("appVersion"),
-      device: data.get("device"),
-      category: data.get("category"),
-      message: data.get("message"),
-      pageUrl: window.location.href,
-      consent: data.get("consent") === "on",
-      turnstileToken: data.get("cf-turnstile-response") || "",
-      nickname_confirm: data.get("nickname_confirm") || "",
-      requestId,
-    };
+    data.set("pageUrl", window.location.href);
+    data.set("requestId", requestId);
 
     try {
       const response = await fetch(form.action, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: data,
       });
 
       if (response.status !== 202) throw new Error(`status ${response.status}`);
+      const result = await response.json().catch(() => ({}));
 
       form.hidden = true;
       button.hidden = true;
-      status.textContent = "We will reply to the email address you gave us if applicable.";
+      const warning =
+        result.screenshot === "failed"
+          ? " The screenshot could not be attached, so please email it if it matters."
+          : "";
+      status.textContent =
+        `We will reply to the email address you gave us if applicable.${warning}`;
       status.focus();
     } catch {
       fail("We could not send that just now.");

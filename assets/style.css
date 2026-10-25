@@ -501,6 +501,8 @@ a { color: var(--brand); }
   resize: vertical;
 }
 
+.field input[type="file"] { padding: 9px 12px; }
+
 .field-hint {
   margin: 6px 0 0;
   font-size: .85rem;
