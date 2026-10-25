@@ -439,47 +439,14 @@ a { color: var(--brand); }
 
 /* ---------- support ---------- */
 
-/* The one page a store listing links to, so the address is the most
-   prominent thing on it: a single, unmistakable mailto target. */
-.support-contact {
-  margin: 0 0 40px;
-  padding: 24px 26px;
-  background: var(--wash);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-}
-
-.support-contact p { margin: 0; color: var(--muted); }
-
-.support-email {
-  display: inline-block;
-  margin: 10px 0 0;
-  padding: 12px 20px;
-  background: var(--brand);
-  color: var(--on-brand);
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-
-.support-email:hover { background: var(--brand-deep); }
-
-.support-contact .support-note {
-  margin-top: 12px;
-  font-size: .9rem;
-}
-
-/* The form is the second path: the email button stays first, and the form is
-   only revealed by support.js so a browser without it never posts nowhere. */
+/* The form is the contact path: the email address is deliberately not
+   published on this page. */
 .support-form-section {
-  margin: 0 0 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--line);
+  margin: 0;
 }
 
 .support-form-section h2 {
-  margin: 32px 0 8px;
+  margin: 0 0 8px;
   font-family: "Lora", Georgia, serif;
   font-weight: 600;
   font-size: 1.35rem;

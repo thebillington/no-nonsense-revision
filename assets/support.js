@@ -7,30 +7,25 @@
   if (!form) return;
 
   const status = document.getElementById("support-form-status");
-  const email = form.dataset.supportEmail || "";
   const button = form.querySelector('button[type="submit"]');
 
   form.hidden = false;
 
-  function mailto() {
-    const subject = "Support request";
-    const body = [
-      `App: ${form.elements.app.value}`,
-      `Category: ${form.elements.category.value}`,
-      `Version: ${form.elements.appVersion.value}`,
-      `Device: ${form.elements.device.value}`,
-      "",
-      form.elements.message.value,
-    ].join("\n");
-    return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  // Store links and app help links can point at /support/?app=wset2 to land
+  // with the right app already selected. Anything not in the list is ignored.
+  const requestedApp = new URLSearchParams(window.location.search)
+    .get("app")
+    ?.trim()
+    .toLowerCase();
+  if (requestedApp) {
+    const match = [...form.elements.app.options].some(
+      (option) => option.value === requestedApp,
+    );
+    if (match) form.elements.app.value = requestedApp;
   }
 
   function fail(message) {
-    status.textContent = `${message} `;
-    const link = document.createElement("a");
-    link.href = mailto();
-    link.textContent = "Email us instead";
-    status.append(link, " — your message is still in the form.");
+    status.textContent = `${message} Your message is still in the form, so you can try again.`;
     status.focus();
     button.disabled = false;
     button.textContent = "Send support request";
