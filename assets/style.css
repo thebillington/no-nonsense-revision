@@ -463,11 +463,19 @@ a { color: var(--brand); }
   gap: 18px;
 }
 
+/* The class sets display:grid, which would otherwise beat the browser's
+   [hidden] rule and leave the form (and its button) visible after success. */
+.support-form[hidden] { display: none; }
+
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
+
+/* The app field is hidden when ?app= already chose it, leaving the category
+   field alone on the row rather than squeezed into half of it. */
+.field-grid-single { grid-template-columns: 1fr; }
 
 .field label {
   display: block;

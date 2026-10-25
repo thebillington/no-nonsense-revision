@@ -21,7 +21,15 @@
     const match = [...form.elements.app.options].some(
       (option) => option.value === requestedApp,
     );
-    if (match) form.elements.app.value = requestedApp;
+    if (match) {
+      form.elements.app.value = requestedApp;
+      // The URL already answered "which app?", so do not ask again.
+      const appField = document.getElementById("support-app-field");
+      if (appField) {
+        appField.hidden = true;
+        appField.closest(".field-grid")?.classList.add("field-grid-single");
+      }
+    }
   }
 
   function fail(message) {
@@ -71,8 +79,8 @@
       if (response.status !== 202) throw new Error(`status ${response.status}`);
 
       form.hidden = true;
-      status.textContent =
-        "Thanks — your request is in. We will reply to the email address you gave us.";
+      button.hidden = true;
+      status.textContent = "We will reply to the email address you gave us if applicable.";
       status.focus();
     } catch {
       fail("We could not send that just now.");
