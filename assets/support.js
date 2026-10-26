@@ -76,7 +76,7 @@
           ? " The screenshot could not be attached, so please email it if it matters."
           : "";
       status.textContent =
-        `We will reply to the email address you gave us if applicable.${warning}`;
+        `Sent — thank you. We will reply to the email address you gave us.${warning}`;
       status.focus();
     } catch {
       fail("We could not send that just now.");
