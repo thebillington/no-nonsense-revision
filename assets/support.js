@@ -56,6 +56,9 @@
 
     data.set("pageUrl", window.location.href);
     data.set("requestId", requestId);
+    // The widget names its hidden input `cf-turnstile-response`; the API field
+    // is `turnstileToken`. Send both so either side can change independently.
+    data.set("turnstileToken", data.get("cf-turnstile-response") || "");
 
     try {
       const response = await fetch(form.action, {
