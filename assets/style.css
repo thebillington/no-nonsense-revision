@@ -319,16 +319,6 @@ a { color: var(--brand); }
   border: 1px solid var(--line);
 }
 
-.app-shot img.app-logo {
-  position: absolute;
-  bottom: -18px;
-  left: -18px;
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  border: 3px solid var(--paper);
-  box-shadow: 0 10px 24px rgba(4, 20, 45, .3);
-}
 
 .app-name {
   margin: 0 0 4px;
@@ -548,11 +538,6 @@ a { color: var(--brand); }
   box-shadow: 0 10px 24px rgba(4, 20, 45, .3);
 }
 
-.product-mark .product-icon {
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
-}
 
 .product-facts {
   padding: 0 0 8px;
