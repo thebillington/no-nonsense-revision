@@ -30,7 +30,7 @@
 
   <link rel="preload" href="/assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/Lora.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=56824261">
+  <link rel="stylesheet" href="/assets/style.css?v=16d3e2df">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -74,7 +74,11 @@
       <p class="product-proof">No account · No ads · Works offline · One payment</p>
     </div>
     <div class="product-mark">
-      <img class="product-shot" src="/assets/screenshots/j277-home.png?v=56824261" alt="Screenshot of OCR J277 GCSE Computer Science" width="520" height="1187">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="/assets/screenshots/j277-home-dark.png?v=16d3e2df">
+        <img class="product-shot" src="/assets/screenshots/j277-home-light.png?v=16d3e2df" alt="Screenshot of OCR J277 GCSE Computer Science" width="640" height="1293">
+      </picture>
+      <img class="product-icon" src="/assets/icons/j277.png?v=16d3e2df" alt="" width="64" height="64">
     </div>
   </header>
 
@@ -173,7 +177,7 @@
             </li>
             <li>
               <span class="syllabus-name">1.6 Ethical, legal, cultural and environmental impacts of digital technology</span>
-              <span class="syllabus-count">1 objectives · 10 cards · 11 questions</span>
+              <span class="syllabus-count">1 objective · 10 cards · 11 questions</span>
               <span class="syllabus-badge paid">Paid</span>
             </li>
         </ul>
@@ -199,7 +203,7 @@
             </li>
             <li>
               <span class="syllabus-name">2.4 Boolean logic</span>
-              <span class="syllabus-count">1 objectives · 12 cards · 12 questions</span>
+              <span class="syllabus-count">1 objective · 12 cards · 12 questions</span>
               <span class="syllabus-badge paid">Paid</span>
             </li>
             <li>
@@ -220,31 +224,17 @@
     <div class="sample-list">
       <details class="sample-question">
         <summary>
-          <span class="sample-topic">Computer systems · Architecture of the CPU</span>
-          <span class="sample-prompt">Which stage of the fetch-execute cycle works out what an instruction means?</span>
+          <span class="sample-topic">Computational thinking, algorithms and programming · Boolean logic</span>
+          <span class="sample-prompt">A warning light comes on only when both sensors detect movement. Which gate does the circuit need?</span>
           <span class="sample-reveal">Show answer</span>
         </summary>
         <ol class="sample-answers" type="A">
-            <li>Store</li>
-            <li>Execute</li>
-            <li class="is-correct">Decode<span class="sample-tick">Correct</span></li>
-            <li>Fetch</li>
+            <li class="is-correct">An AND gate, because both inputs must be 1<span class="sample-tick">Correct</span></li>
+            <li>A NOT gate, because it inverts its one input</li>
+            <li>An OR gate, because one input being 1 is enough</li>
+            <li>No gate, because the sensors already send a digital signal</li>
         </ol>
-        <p class="sample-why"><strong>Why:</strong> The fetch-execute cycle has three stages: fetch the next instruction from memory, decode it to work out what it means, and execute it.</p>
-      </details>
-      <details class="sample-question">
-        <summary>
-          <span class="sample-topic">Computer systems · Primary storage (memory)</span>
-          <span class="sample-prompt">Which type of memory loses its contents when power is removed?</span>
-          <span class="sample-reveal">Show answer</span>
-        </summary>
-        <ol class="sample-answers" type="A">
-            <li>Non-volatile memory</li>
-            <li class="is-correct">Volatile memory<span class="sample-tick">Correct</span></li>
-            <li>Secondary storage</li>
-            <li>ROM</li>
-        </ol>
-        <p class="sample-why"><strong>Why:</strong> Volatile memory loses its contents when the computer is switched off. RAM is the main example.</p>
+        <p class="sample-why"><strong>Why:</strong> An AND gate outputs 1 only when all of its inputs are 1, and outputs 0 for every other combination of inputs.</p>
       </details>
       <details class="sample-question">
         <summary>
@@ -262,20 +252,6 @@
       </details>
       <details class="sample-question">
         <summary>
-          <span class="sample-topic">Computer systems · Threats to computer systems and networks</span>
-          <span class="sample-prompt">Which describes malware?</span>
-          <span class="sample-reveal">Show answer</span>
-        </summary>
-        <ol class="sample-answers" type="A">
-            <li>A rule that controls who may use a network</li>
-            <li class="is-correct">Software written to harm, disrupt or steal data<span class="sample-tick">Correct</span></li>
-            <li>Hardware that connects a computer to a network</li>
-            <li>Software that keeps a computer&#x27;s files tidy</li>
-        </ol>
-        <p class="sample-why"><strong>Why:</strong> Malware is software designed to cause harm, disrupt a system or steal data. Viruses, trojans, spyware, keyloggers, adware and ransomware are all forms of malware.</p>
-      </details>
-      <details class="sample-question">
-        <summary>
           <span class="sample-topic">Computational thinking, algorithms and programming · Designing, creating and refining algorithms</span>
           <span class="sample-prompt">A student draws an algorithm as symbols joined by arrows. What has the student produced?</span>
           <span class="sample-reveal">Show answer</span>
@@ -290,17 +266,45 @@
       </details>
       <details class="sample-question">
         <summary>
-          <span class="sample-topic">Computational thinking, algorithms and programming · Boolean logic</span>
-          <span class="sample-prompt">A warning light comes on only when both sensors detect movement. Which gate does the circuit need?</span>
+          <span class="sample-topic">Computer systems · Threats to computer systems and networks</span>
+          <span class="sample-prompt">Which describes malware?</span>
           <span class="sample-reveal">Show answer</span>
         </summary>
         <ol class="sample-answers" type="A">
-            <li class="is-correct">An AND gate, because both inputs must be 1<span class="sample-tick">Correct</span></li>
-            <li>A NOT gate, because it inverts its one input</li>
-            <li>An OR gate, because one input being 1 is enough</li>
-            <li>No gate, because the sensors already send a digital signal</li>
+            <li>A rule that controls who may use a network</li>
+            <li class="is-correct">Software written to harm, disrupt or steal data<span class="sample-tick">Correct</span></li>
+            <li>Hardware that connects a computer to a network</li>
+            <li>Software that keeps a computer&#x27;s files tidy</li>
         </ol>
-        <p class="sample-why"><strong>Why:</strong> An AND gate outputs 1 only when all of its inputs are 1, and outputs 0 for every other combination of inputs.</p>
+        <p class="sample-why"><strong>Why:</strong> Malware is software designed to cause harm, disrupt a system or steal data. Viruses, trojans, spyware, keyloggers, adware and ransomware are all forms of malware.</p>
+      </details>
+      <details class="sample-question">
+        <summary>
+          <span class="sample-topic">Computer systems · Primary storage (memory)</span>
+          <span class="sample-prompt">Which type of memory loses its contents when power is removed?</span>
+          <span class="sample-reveal">Show answer</span>
+        </summary>
+        <ol class="sample-answers" type="A">
+            <li>Non-volatile memory</li>
+            <li class="is-correct">Volatile memory<span class="sample-tick">Correct</span></li>
+            <li>Secondary storage</li>
+            <li>ROM</li>
+        </ol>
+        <p class="sample-why"><strong>Why:</strong> Volatile memory loses its contents when the computer is switched off. RAM is the main example.</p>
+      </details>
+      <details class="sample-question">
+        <summary>
+          <span class="sample-topic">Computer systems · Architecture of the CPU</span>
+          <span class="sample-prompt">Which stage of the fetch-execute cycle works out what an instruction means?</span>
+          <span class="sample-reveal">Show answer</span>
+        </summary>
+        <ol class="sample-answers" type="A">
+            <li>Store</li>
+            <li>Execute</li>
+            <li class="is-correct">Decode<span class="sample-tick">Correct</span></li>
+            <li>Fetch</li>
+        </ol>
+        <p class="sample-why"><strong>Why:</strong> The fetch-execute cycle has three stages: fetch the next instruction from memory, decode it to work out what it means, and execute it.</p>
       </details>
     </div>
     <p class="sample-note">These are original questions written for the app. They are not past paper or official examination questions.</p>

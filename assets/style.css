@@ -304,19 +304,36 @@ a { color: var(--brand); }
   box-shadow: var(--shadow);
 }
 
-.app-shot {
+.app-shot,
+.product-mark {
   position: relative;
+}
+
+.app-shot {
   width: 100%;
-  max-width: 200px;
+  max-width: 230px;
   margin: 0 auto 20px;
 }
+
+.app-shot picture,
+.product-mark picture { display: block; }
 
 .app-shot img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 16px;
-  border: 1px solid var(--line);
+}
+
+.app-shot img.app-logo {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: 3px solid var(--paper);
+  box-shadow: 0 10px 24px rgba(4, 20, 45, .3);
 }
 
 
@@ -514,26 +531,26 @@ a { color: var(--brand); }
 }
 
 .product-mark {
-  position: relative;
   justify-self: center;
   width: 100%;
-  max-width: 260px;
+  max-width: 300px;
 }
 
 .product-shot {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 24px;
-  border: 1px solid var(--line);
-  box-shadow: 0 24px 60px rgba(4, 20, 45, .22);
 }
 
 .product-icon {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  z-index: 3;
   display: block;
-  width: 76px;
-  height: 76px;
-  border-radius: 18px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
   border: 3px solid var(--paper);
   box-shadow: 0 10px 24px rgba(4, 20, 45, .3);
 }
@@ -1105,9 +1122,40 @@ a { color: var(--brand); }
 /* Four nav links plus the wordmark do not fit on a phone, and a wrapped
    masthead is better than one that runs off the edge. */
 @media (max-width: 560px) {
-  .masthead-inner { flex-wrap: wrap; gap: 12px; padding: 14px 0; }
-  .masthead-nav { gap: 18px; }
-  .masthead-nav a { font-size: .9rem; }
+  .masthead-inner {
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 0;
+    padding: 10px 24px 0;
+  }
+
+  .wordmark {
+    font-size: 1.08rem;
+  }
+
+  .wordmark-mark {
+    width: 28px;
+    height: 28px;
+    font-size: .95rem;
+  }
+
+  .masthead-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0 11px;
+    border-top: 1px solid var(--line);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .masthead-nav::-webkit-scrollbar { display: none; }
+
+  .masthead-nav a {
+    flex: 0 0 auto;
+    font-size: .88rem;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 860px) {
@@ -1119,7 +1167,7 @@ a { color: var(--brand); }
   .highlight-list { grid-template-columns: 1fr; }
   .app-grid { grid-template-columns: 1fr; }
   .app { padding: 28px 24px; }
-  .app-shot { max-width: 258px; }
+  .app-shot { max-width: 240px; }
   .footer-inner { flex-direction: column; }
   .product-hero { grid-template-columns: 1fr; gap: 40px; }
   .product-mark { justify-self: start; }
@@ -1136,4 +1184,32 @@ a { color: var(--brand); }
   .feature-grid { grid-template-columns: 1fr; }
   .product { padding-left: 20px; padding-right: 20px; }
   .product-cta { padding: 26px 22px; }
+  .syllabus-section { padding: 18px 18px 20px; }
+  .syllabus-list li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 13px 0;
+  }
+  .syllabus-count {
+    text-align: left;
+    font-size: .84rem;
+  }
+  .syllabus-badge {
+    grid-column: 1;
+    justify-self: start;
+    margin-top: 5px;
+  }
+}
+
+/* Very narrow phones: the two-icon hero mark must not force the page wider
+   than the viewport, or the headline is clipped. */
+@media (max-width: 380px) {
+  .hero-mark { width: 260px; height: 190px; }
+  .hero-mark .hero-app-primary { width: 170px; height: 170px; }
+  .hero-mark .hero-app-secondary {
+    width: 90px;
+    height: 90px;
+    border-width: 3px;
+    border-radius: 22px;
+  }
 }
