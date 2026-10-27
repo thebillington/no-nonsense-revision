@@ -416,6 +416,16 @@ a { color: var(--brand); }
 
 .app-badge.play img { height: 60px; }
 
+.store-soon {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: .92rem;
+  font-weight: 600;
+}
+
 .app-more {
   margin: 18px 0 0;
   font-weight: 600;
